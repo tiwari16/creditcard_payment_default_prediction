@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
-pickle_in = open('Models/finalxgb_model.pkl', 'rb')
+pickle_in = open('Models/finalxgb_model2.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 
@@ -115,15 +115,11 @@ def credit_card_payment_default(LIMIT_BAL, SEX, EDUCATION, MARRIAGE, AGE, PAY_0,
 
     """
 
-    # prediction = classifier.predict((pd.DataFrame([[LIMIT_BAL, SEX, EDUCATION, MARRIAGE, AGE, PAY_0, PAY_2,
-    #                                                 PAY_3, PAY_4, PAY_5, PAY_6, BILL_AMT1, BILL_AMT2,
-    #                                                 BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6, PAY_AMT1,
-    #                                                 PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6]])))
+    prediction = classifier.predict((pd.DataFrame([[LIMIT_BAL, SEX, EDUCATION, MARRIAGE, AGE, PAY_0, PAY_2,
+                                                    PAY_3, PAY_4, PAY_5, PAY_6, BILL_AMT1, BILL_AMT2,
+                                                    BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6, PAY_AMT1,
+                                                    PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6]])))
 
-    prediction = classifier.predict((pd.DataFrame([[20000.0, 2, 2, 1, 24, 2, 2,
-                                                    -1, -1, -2, -2, 3198.0, 3102.0,
-                                                    3198.0, 3198.0, 0.0, 0.0, 689.0,
-                                                    0.0, 0.0, 0.0, 685.0, 798.0]])))
 
     print(prediction)
     return prediction
