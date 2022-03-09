@@ -12,7 +12,7 @@ Data is then loaded in to the cassandra database and extracted via a csv file an
 
 The Pickle file contains the final model which is been used to create a python app to load the model and generate prediction based on the input data. I used Streamlit to build the web app for gathering the input. This project is written in python and runs as a Dockerised app. 
 
-This is a binary classifiaction problem and the final model is based on the XGBoost algorithm, predicting with **86% accuracy**.
+This is a binary classification problem and the final model is based on the XGBoost algorithm, predicting with **86% accuracy**.
 
 ## Technologies
 
