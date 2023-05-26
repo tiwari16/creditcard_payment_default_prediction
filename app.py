@@ -5,7 +5,7 @@ import streamlit as st
 from PIL import Image
 
 pickle_in = open('Models/finalxgb_model2.pkl', 'rb')
-classifier = pickle.load(pickle_in)
+# classifier = pickle.load(pickle_in)
 
 
 def credit_card_payment_default(LIMIT_BAL, SEX, EDUCATION, MARRIAGE, AGE, PAY_0, PAY_2,
